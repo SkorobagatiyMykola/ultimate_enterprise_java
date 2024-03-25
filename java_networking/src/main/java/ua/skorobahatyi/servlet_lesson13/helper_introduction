@@ -1,0 +1,36 @@
+https://www.youtube.com/watch?v=gPBMJNq0_hQ&list=PLqt5_5aU1KQLFZH-Rltag_AvHtQvDHhzG&index=15
+Lesson 13 - Server-side Java
+Java platforms, Servlet API, Tomcat, HTTP
+============================================================
+Платформ (ЕКО-система) для написвння беккнду бездіч:
+    Задача написати серверної програми на Java
+- Spring by Pivotal
+- Jakarta EE Enterprise Edition написання серверної частини + БД + REST, належала Oracle віддали в Eclipse
+- Vert.X by Eclipse
+- Quarkus by RedHat
+- Micronaut
+============================================================
+Server-side components (основні інструменти типових задач):
+- HTTP Request handling => API WEB обробка запитів
+- Authorization, Authentication =>
+- Marshalling/Unmarshalling     =>
+- Dependency Injection          => (!) Ключова річ, контейнер
+- Testing
+- Messaging
+- ORM
+- Transaction Management
+- DB Connection Pool     ......  and much more .....
+Адаптери, Фасади або Фабрики
+============================================================
+How to compare? Як порівняти платформи, еко-системи:
+1. Ask colleagues
+2. Check trends
+3. Find sources
+Для порівняння, можна зайти на google trends і порівняти кількість запитів (не супер надійне джерело порівняння)
+https://trends.google.com/trends/explore?geo=UA&q=Java%20EE,Spring%20Boot,Quarkus&hl=en-GB
+Порівняння через github, скільки зірочок має певна технологія:
+https://github.com/quarkusio    => 12.9 K. stars
+https://github.com/search?q=micronaut&type=repositories     => 5.9 K. stars
+https://github.com/search?q=spring+boot&type=repositories   => 72.3 K. stars
+(?) Що буде в майбутеьому з цими технологіями ніхто не знає
+============================================================
