@@ -1,4 +1,4 @@
-package ua.skorobahatyi.servlet_lesson13;
+package ua.skorobahatyi.lesson13_servlet;
 
 import lombok.SneakyThrows;
 
