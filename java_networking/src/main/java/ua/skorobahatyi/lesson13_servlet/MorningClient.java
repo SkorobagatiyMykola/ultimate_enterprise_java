@@ -21,7 +21,7 @@ public class MorningClient {
         var writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 
         writer.write("GET /test/morning HTTP/1.1\n");
-        //writer.write("GET /test/morning?name=Petro HTTP/1.1\n");
+        //writer.write("GET /test/morning?name=Petro HTTP/1.1\n"); // request with parameters
         writer.write("Host: 192.168.0.109\n");
         writer.write("\n");
         writer.flush();
@@ -34,6 +34,7 @@ public class MorningClient {
         while((outStr = reader.readLine()) != null){
             System.out.println(outStr);
         }
+        System.out.println("==================");
 
         reader.close();
         writer.close();
