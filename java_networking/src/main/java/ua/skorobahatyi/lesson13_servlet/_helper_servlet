@@ -1,0 +1,33 @@
+SERVLET
+Servlet API    and    Servlet Container
+Servlet API         => Анотації і інтерфейси    , provides HTTP-friendly API
+Servlet Container   => Реалізація Servlet API   , executes servlet code in a managed thread pool
+=============================================================
+Сервлети створювались для обробки HTTP-запитів
+
+В сервлеті ми завжди праюємо з Request and Response
+
+mvn clean package -DskipTests
+hoe to connect tomcat
+(!!!!) https://www.youtube.com/watch?v=JIRDMGJ66SE
+
+http://192.168.0.109:8080/test/morning?name=Olga
+http://192.168.0.109:8080/test/morning?name=Olga
+http://91.196.192.236:8080/test/morning?name=Olga
+91.196.192.236
+=============================================================
+послати реез запит через консоль
+
+curl http://localhost:8080/test/morning?name="Olga"
+curl http://localhost:8080/test/morning
+=============================================================
+curl http://localhost:8080/test/morning
+curl http://localhost:8080/test/message
+
+curl -X POST http://localhost:8080/test/message  -d '{"name":"Mykola2","message": "Hi, all"}'
+
+curl -X POST http://localhost:8080/test/message -H "Content-Type: application/json" -d "{\"name\":\"Olga Sk\",\"message\":\"Hi  all\"}"
+
+
+curl -X POST http://192.168.0.109:8080/test/message  -H "Host: 192.168.0.109" -H "Content-Type: application/json" -d '{"name":"Olga","message": "Hiall"}'
+ -H 'Content-Type: application/json'
