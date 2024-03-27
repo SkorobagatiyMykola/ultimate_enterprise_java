@@ -1,0 +1,32 @@
+Lesson 14 - Introduction to Spring
+Spring platform overview, Live Demo
+===========================================
+(!) Ціль Spring => спрощує Enterprise розробку
+https://start.spring.io/  (spring initializr) зявилася разом з Spring Boot
+=================================================
+Переваги Spring Boot
+ - Запуска Tom Cat контейнер який є в ньго в середени
+ - стартер де менеджеряться потрібні dependency
+ - зібрати проект набагато бистріше
+
+ curl http://localhost:8080/ping/current
+ curl -X GET http://localhost:8080/ping
+ curl -X GET http://localhost:8080/ping/session
+ curl -X GET http://localhost:8080/ping/current
+ =================================================
+ Конференція #SpringOne
+ Тарас Бойчук
+ =================================================
+ You can leverage a powerful Spring ecosystem, if you understand the foundation
+ (!) Spring is just a tool, created by other Java folks like you
+ Spring -> Рефлексія
+ ================
+ What we will learn:
+ - problems & solution, проблематика (Inversion of Control) => Dependency Injection
+ - internal details (внутрішні деталі реалізації)
+ - tools & best practices
+
+ (?)
+ What is inversion of control and why do we need it?        (Theoretical)
+ How does Spring build context and create proxies?          (Partially applied)
+ How to properly build REST API using Spring MVC?           (Applied)
