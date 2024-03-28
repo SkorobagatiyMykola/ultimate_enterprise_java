@@ -1,13 +1,13 @@
-package ua.skorobahatyi.case2.config;
+package ua.skorobahatyi.case3.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 import org.springframework.web.client.RestTemplate;
 
 @Configuration
-public class DemoAppConfig2 {
+@ComponentScan("ua.skorobahatyi.case3")
+public class DemoAppConfig3 {
 
     @Bean
     //@Scope("prototype") // I tested scope prototype
