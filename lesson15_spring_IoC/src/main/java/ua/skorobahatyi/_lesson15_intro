@@ -1,5 +1,6 @@
 Lesson 15 - Spring IoC
 Spring IoC basics, Spring vs Servlet Context, Custom IoC container
+https://www.youtube.com/watch?v=74gjdKSJGwE&list=PLqt5_5aU1KQLFZH-Rltag_AvHtQvDHhzG&index=16
 ====================================================================
 Agenda
 - Spring IoC basics overview
@@ -22,6 +23,7 @@ private final DefaultListableBeanFactory beanFactory; - Це мапа
 @ComponentScan -
 @Configuration (додаткова логіка) + створення Proxy
 ServletContext - він один, для всіх сервлетів
+    це мапа атрибютів
 Для всіх сервлетів, сесій, запитів існує тількт один сервлет контекст
 В ServletContext в його мапу ми "засовуємо" цілий Spring Context
 + Коли в нас буде запит, ми можемо витягнути Spring Context, а з Spring Context-у можна витягнути потрібний Bean (обїект)
@@ -31,3 +33,29 @@ curl http://localhost:8080/v1/nasa/pictures
      http://localhost:8080/v1/test
 Сюди потрібно "кидати" war-архів:
 (!!) C:\My_Useful_programs\TomCat\apache-tomcat-9.0.87-windows-x64\apache-tomcat-9.0.87\webapps
+====================================================================
+5 Spring працює з javax.servlet , а не з jakarta.*
+====================================================================
+(!) 37:44
+AbstractAnnotationConfigDispatcherServletInitializer - використовується, щоб законфігорувати DispatcherServlet
+interface WebApplicationInitializer
+Спочатку через war file створеться один сервлет це буде DispatcherServlet
+    - створить мапінг
+    - створить Spring Context, і засетить як атрибут сервлет контекста
+====================================================================
+В цьому атрибуті      org.springframework.web.context.WebApplicationContext.ROOT
+        зберігається цілий Spring Context
+====================================================================
+Ієрархічний конткест
+    - Є сервлет контекст
+    - є ROOT контекст
+(!) Іще раз є один сервлет контекст, який в собі зберігає Spring context
+TomCat створить деспетчер сервлет, при старті, який підготував програміст, якщо спрінга немає
+тоді на основі інстансів сервлетів TomCat створить деспетчер сервлет
+
+запуск цього метода створить діспетчер сервлет
+public interface WebApplicationInitializer {
+	void onStartup(ServletContext servletContext) throws ServletException;
+}
+
+Spring знає про контракт API і він "дерне" метод onStartup()

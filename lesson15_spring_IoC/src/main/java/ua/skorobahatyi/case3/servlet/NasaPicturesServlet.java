@@ -1,3 +1,4 @@
+/*
 package ua.skorobahatyi.case3.servlet;
 
 import org.springframework.context.ApplicationContext;
@@ -44,3 +45,4 @@ public class NasaPicturesServlet extends HttpServlet {
                 .forEach(writer::println);
     }
 }
+*/
