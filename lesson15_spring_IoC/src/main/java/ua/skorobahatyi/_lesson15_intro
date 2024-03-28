@@ -59,3 +59,6 @@ public interface WebApplicationInitializer {
 }
 
 Spring знає про контракт API і він "дерне" метод onStartup()
+(+) replace lambda with method Reference
+
+можна застосовувавти reflection можна і google guavo
