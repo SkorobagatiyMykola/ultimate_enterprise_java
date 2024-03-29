@@ -1,0 +1,20 @@
+Lesson 15 - Spring IoC
+Spring IoC basics, Spring vs Servlet Context, Custom IoC container
+====================================================================
+Agenda
+- Spring IoC basics overview
+    * Beans & Application context
+    * Implicit & Explicit bean configuration
+- The relationship between Servlet Context and Spring Context
+- Creating custom IoC container
+====================================================================
+(!) Spring facilitates decoupling by separating the logic from object initialization
+- Context
+- WEB MVC
+(?) (1) What is an application context,
+    (2) how it gets created,
+    (3) and how does it look in a typical web app?
+====================================================================
+Що таке Application context (Spring-овий)
+    Це реєстр бінів, реєстрів обєктів, які потрібні для роботи.
+private final DefaultListableBeanFactory beanFactory; - Це мапа
