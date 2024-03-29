@@ -1,0 +1,38 @@
+=======================================================
+Lesson 16 - Spring MVC
+link: https://www.youtube.com/watch?v=oIAv6rC7770&list=PLqt5_5aU1KQLFZH-Rltag_AvHtQvDHhzG&index=16
+MVC implementation, REST principles, Spring tools for working with REST
+=======================================================
+Agenda:
+- How MVC pattern is implemented in Spring
+    * Model, ViewResolver, View, Controller
+- REST principles - what it is and how to design RESTful API
+- Spring MVC tools for working with REST
+    * @RestController, RestTemplate
+    * RequestEntity<T>, ResponseEntity<T>
+    * @ControllerAdvice
+=======================================================
+Request:
+http://localhost:8080/v16/test
+http://localhost:8080/v16/hello
+=======================================================
+TomCat10 працює з 5 servlet-ами, які мігрували на jakarta
+TomCat9 працює з 4 servlet-ами, які на javax, бо spring MVC5, працює з 4 сервлетами
+=======================================================
+(!)Hot key:
+ - Shift Shift, help me find classes or interface
+ =======================================================
+ ViewResolver
+ Контроллер повертає вюху і ViewResolver, по назві знаходить вьху
+ InternalResourceViewResolver - встроений, який знахоить вьюхи в  WEB-INF
+ =======================================================
+ war файл мість:
+ - META-INF
+ - WEB-INF
+    - classes (наші скомпільовані класи)
+        hello1.jsp, ViewResolver шукає вьохи в руті, а у нас вьюха попадає в WEB-INF/classes
+    - lib  (бібліотечки)
+    <scope>provided</scope> - використовується на етапі компіляції, але не пакується в lib-архів
+тобто нам потрібно вказати (плагіном), щоб вьюху переместили в ROOT
+=======================================================
+Model може передавати параметри (атрибути) між Контролером і Вьюхою

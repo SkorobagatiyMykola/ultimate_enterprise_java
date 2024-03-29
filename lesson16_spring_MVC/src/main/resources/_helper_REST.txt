@@ -1,0 +1,25 @@
+============================================================
+Nowadays Spring MVC is usually used to create RESRful APIs
+============================================================
+REST is a set of principles, not a protocol
+(!) REST - representational state transfer
+Via RESTful API we transfer the representation of the state of some resource in a JSON format /text, xml
+REST Передача стану ресурса в певному форматі
+
+links - === The response provide links (посилання на інші ресурси)
+============================================================
+Как работает REST API: 6 принципов архитектуры
+1. Клиент-серверная модель (client-server model).
+2. Отсутствие состояния (statelessness).
+3. Кэширование (cacheability).
+4. Единообразие интерфейса (uniform interface).
+5. Многоуровневая система (layered system).
+6. Код по требованию (code on demand) — необязательно.
+============================================================
+Client - RestTemplate
+Server - @RestController
+
+@ControllerAdvice -> Allow to implement separate error handing based on exceptions
+============================================================
+Requests:
+http://localhost:8080/v16/messages
